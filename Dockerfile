@@ -3,6 +3,7 @@ RUN apt-get update && apt-get -y install libglib2.0 libsm6 libxext6 libxrender-d
 RUN apt-get update && apt-get -y install \
     bash \
     git \
+    wget \
     curl \
     postgresql-client \
     gettext \
