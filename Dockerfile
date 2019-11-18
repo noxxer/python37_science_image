@@ -1,6 +1,6 @@
 FROM python:3.7-slim
 RUN apt-get update && apt-get -y install libglib2.0 libsm6 libxext6 libxrender-dev; apt-get clean
-RUN apk update && apk add --update --no-cache \
+RUN apt-get update && apt-get -y install \
     bash \
     git \
     curl \
@@ -13,14 +13,14 @@ RUN apk update && apk add --update --no-cache \
     libmagic
 RUN pip install opencv-contrib-python-headless
 
-RUN apk add jpeg-dev \
+RUN apt-get -y install jpeg-dev \
     zlib-dev \
     freetype-dev \
     openjpeg-dev
 
 ENV EXIFTOOL_VERSION=11.65
 
-RUN apk add --no-cache perl make
+RUN apt-get -y install perl make
 RUN cd /tmp \
 	&& wget http://www.sno.phy.queensu.ca/~phil/exiftool/Image-ExifTool-${EXIFTOOL_VERSION}.tar.gz \
 	&& tar -zxvf Image-ExifTool-${EXIFTOOL_VERSION}.tar.gz \
