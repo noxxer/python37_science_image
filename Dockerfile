@@ -10,11 +10,6 @@ RUN apt-get update && apt-get -y install \
     libxslt-dev
 RUN pip install opencv-contrib-python-headless
 
-RUN apt-get -y install jpeg-dev \
-    zlib-dev \
-    freetype-dev \
-    openjpeg-dev
-
 ENV EXIFTOOL_VERSION=11.65
 
 RUN apt-get -y install perl make
