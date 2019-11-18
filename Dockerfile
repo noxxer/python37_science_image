@@ -5,12 +5,9 @@ RUN apt-get update && apt-get -y install \
     git \
     curl \
     postgresql-client \
-    postgresql-dev \
-    build-base \
     gettext \
     libffi-dev \
-    libxslt-dev \
-    libmagic
+    libxslt-dev
 RUN pip install opencv-contrib-python-headless
 
 RUN apt-get -y install jpeg-dev \
