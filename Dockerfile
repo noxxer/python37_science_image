@@ -6,6 +6,7 @@ RUN apt-get update && apt-get -y install \
     wget \
     curl \
     postgresql-client \
+    psycopg2-binary \
     python3.7-dev \
     gettext \
     libffi-dev \
