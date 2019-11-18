@@ -6,12 +6,11 @@ RUN apt-get update && apt-get -y install \
     wget \
     curl \
     postgresql-client \
-    psycopg2-binary \
     python3.7-dev \
     gettext \
     libffi-dev \
     libxslt-dev
-RUN pip install opencv-contrib-python-headless
+RUN pip install opencv-contrib-python-headless psycopg2-binary
 
 ENV EXIFTOOL_VERSION=11.65
 
