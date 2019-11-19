@@ -10,5 +10,6 @@ pandas==0.25.3
 colormath==3.0.0
 opencv-python==4.1.1.26
 opencv-contrib-python==4.1.1.26
+scikit-learn==0.21.3
 
 lxml==4.4.1
